@@ -15,7 +15,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {'/': (context) => const HomeScreen()},
+      routes: {'/': (context) => HomeScreen()},
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.black,
           appBarTheme: const AppBarTheme(
