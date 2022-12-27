@@ -1,8 +1,9 @@
+import 'package:first_app/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    App(),
+    const App(),
   );
 }
 
@@ -13,17 +14,14 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Test App')),
-        body: Container(
-          child: const Center(
-            child: Directionality(
-              textDirection: TextDirection.ltr,
-              child: Text('Hello World'),
-            ),
+      initialRoute: '/',
+      routes: {'/': (context) => const HomeScreen()},
+      theme: ThemeData(
+          scaffoldBackgroundColor: Colors.black,
+          appBarTheme: const AppBarTheme(
+            color: Colors.black,
           ),
-        ),
-      ),
+          brightness: Brightness.dark),
     );
   }
 }
