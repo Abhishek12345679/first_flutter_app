@@ -1,9 +1,15 @@
+import 'package:first_app/common/widgets/category_icon.dart';
+
 class Category {
-  String id;
+  int reminderCount;
   String name;
   bool? isChecked = true;
+  final CategoryIcon icon;
 
-  Category({required this.id, this.isChecked, required this.name});
+  Category({
+    required this.icon,
+    required this.reminderCount,
+    this.isChecked,
+    required this.name,
+  });
 }
-
-Category category = Category(id: '1', name: 'ABC');
