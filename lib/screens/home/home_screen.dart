@@ -1,6 +1,7 @@
 import 'package:first_app/models/category_collection.dart';
 import 'package:first_app/screens/home/footer.dart';
 import 'package:first_app/screens/home/grid_view_items.dart';
+import 'package:first_app/screens/home/list_view_items.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
               }
             },
             child: Text(
-              layoutType == 'grid' ? 'Show List' : 'Show Grid',
+              layoutType == 'grid' ? 'Edit' : 'Done',
               style: TextStyle(color: Colors.white),
             ),
           )
@@ -43,7 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             Expanded(
-              child: GridViewItems(categoryCollection: categoryCollection),
+              child: layoutType == 'grid'
+                  ? GridViewItems(categoryCollection: categoryCollection)
+                  : ListViewItems(),
             ),
             Footer()
           ],
