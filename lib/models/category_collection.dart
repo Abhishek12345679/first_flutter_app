@@ -51,4 +51,8 @@ class CategoryCollection {
   insertItem(int index, Category item) {
     _categories.insert(index, item);
   }
+
+  List<Category> get selectedCategories {
+    return _categories.where((element) => element.isChecked).toList();
+  }
 }
