@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: layoutType == 'grid'
                   ? GridViewItems(categoryCollection: categoryCollection)
-                  : ListViewItems(),
+                  : ListViewItems(categoryCollection: categoryCollection),
             ),
             Footer()
           ],

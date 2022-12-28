@@ -17,6 +17,7 @@ class GridViewItems extends StatelessWidget {
         mainAxisSpacing: 10,
         padding: const EdgeInsets.all(10),
         children: categoryCollection.categories
+            .where((cat) => cat.isChecked)
             .map((e) => Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
