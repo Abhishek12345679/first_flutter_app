@@ -11,7 +11,7 @@ class CategoryCollection {
       reminderCount: 0,
       name: 'Today',
       icon: const CategoryIcon(
-        bgColor: CupertinoColors.activeGreen,
+        bgColor: CupertinoColors.activeBlue,
         iconData: CupertinoIcons.calendar_today,
       ),
     ),
@@ -19,24 +19,24 @@ class CategoryCollection {
       reminderCount: 0,
       name: 'Scheduled',
       icon: const CategoryIcon(
-        bgColor: CupertinoColors.activeBlue,
-        iconData: Icons.email,
+        bgColor: CupertinoColors.systemRed,
+        iconData: CupertinoIcons.calendar,
       ),
     ),
     Category(
       reminderCount: 0,
       name: 'All',
       icon: const CategoryIcon(
-        bgColor: CupertinoColors.activeOrange,
-        iconData: CupertinoIcons.calendar,
+        bgColor: CupertinoColors.inactiveGray,
+        iconData: CupertinoIcons.tornado,
       ),
     ),
     Category(
       reminderCount: 0,
-      name: 'Flagged',
+      name: 'Completed',
       icon: const CategoryIcon(
         bgColor: CupertinoColors.systemRed,
-        iconData: CupertinoIcons.flag_fill,
+        iconData: CupertinoIcons.check_mark_circled_solid,
       ),
     ),
   ];

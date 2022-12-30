@@ -32,26 +32,18 @@ class _ListViewItemsState extends State<ListViewItems> {
                 key: UniqueKey(),
                 style: ListTileStyle.drawer,
                 leading: Checkbox(
-                  value: cat.isChecked,
-                  onChanged: (bool? value) {
-                    setState(() {
-                      cat.toggleIsChecked();
-                    });
-                  },
-                ),
-                // leading: Container(
-                //     padding: EdgeInsets.all(3),
-                //     decoration: BoxDecoration(
-                //       shape: BoxShape.circle,
-                //       color: Colors.blueAccent,
-                //     ),
-                //     child: Icon(Icons.check)),
+                    value: cat.isChecked,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        cat.toggleIsChecked();
+                      });
+                    }),
                 trailing: Icon(Icons.reorder),
                 tileColor: Colors.grey[900],
                 title: Row(
                   children: [
                     cat.icon,
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Text(cat.name),
